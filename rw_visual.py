@@ -12,7 +12,8 @@ while True:
     # Нанесение точек на диаграмму
     plt.style.use('classic')
     fig, ax = plt.subplots()
-    ax.scatter(rw.x_values, rw.y_values, s=15)
+    points_numbers = range(rw.num_points)
+    ax.scatter(rw.x_values, rw.y_values, c=points_numbers, cmap=plt.cm.Blues, edgecolors='none', s=15)
     plt.show()
 
     keep_running = input("Make another walk? (y/n): ")
