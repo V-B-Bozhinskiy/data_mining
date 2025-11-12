@@ -5,7 +5,8 @@ y_values = [x**2 for x in x_values]
 
 plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
-ax.scatter(x_values, y_values, s=10)
+#ax.scatter(x_values, y_values, s=10)
+ax.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues, s=10)
 
 #Назначение заголовка диаграмы и меток осей
 ax.set_title("Square Numbers", fontsize=24)
