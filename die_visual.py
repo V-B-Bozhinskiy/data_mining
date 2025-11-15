@@ -5,7 +5,7 @@ from die import Die
 
 #Создание кубика Д6
 die_1 = Die() #D6 по умолчанию
-die_2 = Die()
+die_2 = Die(10) #D10
 
 # Моделирование серии бросков с сохранением результата в списке.
 results = []
@@ -31,5 +31,5 @@ data = [Bar(x=x_values, y=frequencies)]
 x_axis_config = {'title': 'Result', 'dtick': 1}
 y_axis_config = {'title': 'Frequency of Result'}
 
-my_layout = Layout(title='Result of rollnig two D6 100 times', xaxis=x_axis_config, yaxis=y_axis_config)
-offline.plot({'data': data, 'layout': my_layout}, filename='d6_d6.html')
+my_layout = Layout(title='Result of rollnig D6 and D10 100 times', xaxis=x_axis_config, yaxis=y_axis_config)
+offline.plot({'data': data, 'layout': my_layout}, filename='d6_d10.html')
